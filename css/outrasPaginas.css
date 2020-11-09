@@ -1,0 +1,502 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Fim do Reset */
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #efefef;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #86F6B9;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00AF50;
+}
+
+/* Início */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fbfbfb;
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    /* height: 131px; */
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 10%;
+    transition: 0.6s ease;
+    z-index: 10;
+}
+
+.logo {
+    width: 10em;
+    transition: 0.5s;
+}
+
+.botoesNavegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.botoesNavegacao a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    transition: 0.3s;
+}
+
+.botoesNavegacao a:hover{
+    transform: translateY(-3px);
+    color: #86F6B9;
+}
+
+.imagemPrincipal {
+    margin-top: 4.25rem;
+    width: 100%;
+    height: 24rem;
+    position: relative;
+}
+
+.imagemPrincipal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.imagemPrincipal h2 {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    text-align: right;
+    font-size: 3rem;
+}
+
+.politicaTermos {
+    line-height: 140%;
+}
+
+.politicaTermos p {
+    margin-bottom: 2rem;
+}
+
+.politicaTermos h2 {
+    margin-top: 3.5rem;
+    font-size: 1.88rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.politicaTermos h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.politicaTermos a {
+    color: #00AF50;
+}
+
+.politicaTermos ul,
+.politicaTermos ol {
+    /* list-style-position: inside; */
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.politicaTermos li {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    margin-top: 6rem;
+    background-color: #2C5E43;
+}
+
+
+
+footer .comMargem {
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.footerCima {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.footerCima p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #86F6B9;
+    margin-bottom: 2rem;
+}
+
+.footerCima a,
+footer h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fdfdfd;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.navPaginaFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.navSuporteFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.navSeguirEmailFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.seguirFooter {
+    width: 100%;
+}
+
+.iconsFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navSeguirEmailFooter a {
+    margin-right: 0.4rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.footerCima a:hover {
+    color: #86F6B9;
+}
+
+.navSeguirEmailFooter i {
+    font-size: 1.88rem;
+}
+
+.seguirFooter {
+    margin-bottom: 3.5rem;
+}
+
+.footerBaixo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #d8d8d8;
+}
+
+footer hr {
+    height: 1px;
+    background-color: #d8d8d8;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.footerBaixo a {
+    font-weight: 500;
+    color: #d8d8d8;
+    text-decoration: none;  
+}
+
+.footerBaixo a:hover {
+    color: #aaa;
+}
+
+
+/* Utilidades */
+
+.etiqueta {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.comMargem {
+    margin-left: 10%;
+    width: 80%;
+}
+
+.comMargemMenor {
+    margin-left: 8%;
+    width: 83%;
+}
+
+.extraBold {
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.navBarBranca {
+    background-color: #fff;
+    height: 4.25rem;
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.25);
+}
+
+.logoNavBranca {
+    width: 100px;
+}
+
+.botoesNavegacaoBranca {
+    color: #000 !important;
+}
+
+.botoesNavegacaoBranca:hover{
+    color: #00AF50 !important;
+}
+
+.categoria {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.categoriaBranca {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+}
+.categoriaPreto {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.italicGreen {
+    font-style: italic;
+    color: #86F6B9;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 300;
+}
+
+/* Relatórios */
+
+.tituloRelatorios {
+    margin-top: 4rem;
+    font-size: 4rem;
+    line-height: 140%;
+}
+
+.containerRelatorios {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardRelatorios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* padding: 1rem 1rem 0 1rem; */
+    border-top: 4px solid #00AF50;
+    border-radius: 0.32rem;
+    background-color: #fff;
+    box-shadow: 0.125rem 0.5rem 1.75rem 0 rgba(0,0,0,0.25);
+    width: 46%;
+    height: 22rem;
+}
+
+.cardRelatorios div {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #434343;
+}
+
+.cardRelatorios div h3 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #606060;
+    line-height: 130%;
+}
+
+.cardRelatorios a {
+    padding: 1rem;
+    width: 100%;
+    color: #505551;
+    font-weight: 700;
+    background-color: #B8F3AE;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+.cardRelatorios a:hover {
+    background-color: #92f082;
+}

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Personalidade</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="/css/outrasPaginas.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+</head>
+<body>
+    <header>
+        <div class="navBar navBarBranca"> 
+            
+            <img src="/imgs/lifetrigger.png" class="logo logoNavBranca">
+            
+            
+            <div class="botoesNavegacao"> <!-- flex, space evenly-->
+                <a href="/" class="botoesNavegacaoBranca">Início</a>
+                <a href="/#coaching" class="botoesNavegacaoBranca">Coaching</a>
+                <a href="/#formacoes" class="botoesNavegacaoBranca">Formações</a>
+                <a href="/#certificacoes" class="botoesNavegacaoBranca">Certificações</a>
+                <a href="/#testemunhos" class="botoesNavegacaoBranca">Testemunhos</a>
+                <a href="/contacto.html" class="botoesNavegacaoBranca">Contacto</a>
+            </div>
+        </div>
+
+        <div class="imagemPrincipal">
+            <img src="/imgs/personalityB2000w.jpg" alt="">
+        </div>
+    </header>
+
+    <div class="comMargem">
+        <h2 class="categoriaPreto etiqueta">Perfil de Personalidade</h2>
+        <p>O que te faz mexer ? O que te motiva ?</p>
+        <p>Responde a estas questões para receberes um <span class="semiBold">relatório profissional gratuito</span>.</p>
+    
+        <form id="regForm" name="testForm" action="/obrigado.html" netlify>
+        
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab radioOption">
+              <h1 class="pergunta">Qual destas áreas da tua vida gostarias de transformar e resignificar ?</h1>
+              <hr>
+              <p>
+                <label>Saúde
+                  <input type="radio" name="Área da vida" value="Saúde" oninput="this.className = ''">
+                </label>
+                <label>Família
+                  <input type="radio" name="Área da vida" value="Família" oninput="this.className = ''">
+                </label>
+                <label>Relacionamentos
+                  <input type="radio" name="Área da vida" value="Relacionamentos" oninput="this.className = ''">
+                </label>
+                <label>Carreira
+                  <input type="radio" name="Área da vida" value="Carreira" oninput="this.className = ''">
+                </label>
+                <label>Finanças
+                  <input type="radio" name="Área da vida" value="Financas" oninput="this.className = ''">
+                </label>
+                <label>Hobbies
+                  <input type="radio" name="Área da vida" value="Hobbies" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+            
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Quando é altura de recarregar as baterias e procurar o equilíbrio, prefere estar sozinho ou com pessoas?</h1>
+              <hr>
+              <p>
+                <label>Sozinho
+                  <input type="radio" name="Quando é altura de recarregar as baterias e procurar o equilíbrio, prefere estar sozinho ou com pessoas?"
+                    value="Sozinho - (E)" oninput="this.className = ''">
+                </label>
+                <label>Com pessoas
+                  <input type="radio" name="Quando é altura de recarregar as baterias e procurar o equilíbrio, prefere estar sozinho ou com pessoas?"
+                    value="Com Pessoas - (I)" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+            
+            <div class="tab radioOption">
+              <h1 class="pergunta">Se fosse estudar um assunto estaria interessado:</h1>
+              <hr>
+              <p>
+                <label>Apenas nos factos e aplicação no agora
+                  <input type="radio" name="estudarUmAssunto" value="agora-(S)" oninput="this.className = ''">
+                </label>
+                <label>Nos conceitos e ideias para o futuro
+                  <input type="radio" name="estudarUmAssunto" value="futuro-(N)" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Toma decisões baseado:</h1>
+              <hr>
+              <p>
+                <label>Na razão e lógica
+                  <input type="radio" name="Toma decisões baseado:" value="Na razão e lógica - (T)" oninput="this.className = ''">
+                </label>
+                <label>Intuição e valores pessoais
+                  <input type="radio" name="Toma decisões baseado:" value="Intuição e valores pessoais - (F)" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Tem agenda ?</h1>
+              <hr>
+              <p>
+                <label>Sim
+                  <input type="radio" name="Tem agenda ?" value="Sim" oninput="this.className = ''" id="temAgenda">
+                </label>
+                <label>Não
+                  <input type="radio" name="Tem agenda ?" value="Não" oninput="this.className = ''" id="naoTemAgenda">
+                </label>
+              </p>
+              
+              <div hidden id="agendaHidden">
+                <hr>
+                <h1 class="pergunta">Usa regularmente ?</h1>
+                <hr>
+                <p>
+                  <label>Sim
+                    <input type="radio" name="Usa regularmente ?" value="Sim" oninput="this.className = ''">
+                  </label>
+                  <label>Não
+                    <input type="radio" name="Usa regularmente ?" value="Não" oninput="this.className = ''">
+                  </label>
+                </p>
+                <hr>
+                <h1 class="pergunta">Gosta de usar ?</h1>
+                <hr>
+                <p>
+                  <label>Sim
+                    <input type="radio" name="Gosta de usar ?" value="Sim" oninput="this.className = ''">
+                  </label>
+                  <label>Não
+                    <input type="radio" name="Gosta de usar ?" value="Não" oninput="this.className = ''">
+                  </label>
+                </p>
+              </div>
+              
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta" id="oQueProcura">O que procura na actividade em questão?</h1>
+              <hr>
+              <p>
+                <textarea name="O que procura na actividade em questão?" placeholder="Alte cena..." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta">Porque escolhe fazer o que faz na vida?</h1>
+              <hr>
+              <p>
+                <textarea name="Porque escolhe fazer o que faz na vida?" placeholder="Porque..." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Como sabe que fez um bom trabalho?</h1>
+              <hr>
+              <p>
+                <label>Sabe por si próprio
+                  <input type="radio" name="Como sabe que fez um bom trabalho?" value="Sabe por si próprio" oninput="this.className = ''">
+                </label>
+                <label>Pergunta sempre
+                  <input type="radio" name="Como sabe que fez um bom trabalho?" value="Pergunta sempre" oninput="this.className = ''">
+                </label>
+                <label>Sabe mas mesmo assim pergunta a outros
+                  <input type="radio" name="Como sabe que fez um bom trabalho?" value="Sabe, mesmo assim pergunta a outros" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta">Como sabe que alguém é bom?</h1>
+              <hr>
+              <p>
+                <textarea name="Como sabe que alguém é bom?" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta">Com que frequência têm que demonstrar competência até que seja convencido? **</h1>
+              <hr>
+              <p>
+                <textarea name="Com que frequência têm que demonstrar competência até que seja convencido?" placeholder="Sei...." cols="40" rows="5"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Sabe o que fazer para aumentar as suas probabilidades de sucesso?</h1>
+              <hr>
+              <p>
+                <label>Sim
+                  <input type="radio" name="Sabe o que fazer para aumentar as suas probabilidades de sucesso?" value="Sim" oninput="this.className = ''">
+                </label>
+                <label>Não
+                  <input type="radio" name="Sabe o que fazer para aumentar as suas probabilidades de sucesso?" value="Não" oninput="this.className = ''">
+                </label>
+              </p>
+              
+    
+              <hr>
+              <h1 class="pergunta">Sabe o que alguém tem que fazer para aumentar as suas hipóteses?</h1>
+              <hr>
+              <p>
+                <label>Sim
+                  <input type="radio" name="Sabe o que alguém tem que fazer para aumentar as suas hipóteses?" value="Sim" oninput="this.className = ''">
+                </label>
+                <label>Não
+                  <input type="radio" name="Sabe o que alguém tem que fazer para aumentar as suas hipóteses?" value="Não" oninput="this.className = ''">
+                </label>
+              </p>
+    
+              <hr>
+              <h1 class="pergunta">Acha fácil ou dificil dizer-lhes?</h1>
+              <hr>
+              <p>
+                <label>Sim
+                  <input type="radio" name="Acha fácil ou dificil dizer-lhes?" value="Sim" oninput="this.className = ''">
+                </label>
+                <label>Não
+                  <input type="radio" name="Acha fácil ou dificil dizer-lhes?" value="Não" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta">Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age? **</h1>
+              <hr>
+              <p>
+                <textarea name="Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age?" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta" id="situacaoMuitoMotivado">Fale-me de uma situação da actividade em questão em que se sentia muito feliz e motivado.</h1>
+              <hr>
+              <p>
+                <textarea name="Situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div> 
+    
+            <div class="tab">
+              <h1 class="pergunta" id="outraSituacaoMuitoMotivado">Fale-me de outra situação distinta da actividade em questão em que se sentia muito feliz e motivado.</h1>
+              <hr>
+              <p>
+                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div> 
+    
+            <div class="tab">
+              <h1 class="pergunta">Fale-me do seu restaurante favorito **</h1>
+              <hr>
+              <p>
+                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              
+    
+              <hr>
+              <h1 class="pergunta">xyz</h1>
+              <hr>
+              <p>
+                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+    
+              <hr>
+              <h1 class="pergunta">xyz</h1>
+              <hr>
+              <p>
+                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Se fosse fazer um projeto com alguém, quereria saber todos os detalhes ou a ideia geral primeiro?</h1>
+              <hr>
+              <p>
+                <label>Detalhes
+                  <input type="radio" name="Projeto com alguém, quereria saber todos os detalhes ou a ideia geral primeiro?" value="Detalhes" oninput="this.className = ''">
+                </label>
+                <label>Geral
+                  <input type="radio" name="Projeto com alguém, quereria saber todos os detalhes ou a ideia geral primeiro?" value="Geral" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Precisaria mesmo de saber a ideia geral ou os detalhes? **</h1>
+              <hr>
+              <p>
+                <label>Ideia Geral
+                  <input type="radio" name="Precisaria mesmo de saber a ideia geral ou os detalhes?" value="Ideia Geral" oninput="this.className = ''">
+                </label>
+                <label>Detalhes
+                  <input type="radio" name="Precisaria mesmo de saber a ideia geral ou os detalhes?" value="Detalhes" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+            <div class="tab">
+              <h1 class="pergunta">Fale-me de uma situação de trabalho complicada.</h1>
+              <hr>
+              <p>
+                <textarea name="Fale-me de uma situação de trabalho complicada." placeholder="...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div> 
+    
+            <div class="tab">
+              <h1 class="pergunta">Linha do Tempo. Imagine uma memória do seu passado, onde se encontra? **</h1>
+              <hr>
+              <p>
+                <textarea name="Linha do Tempo. Imagine uma memória do seu passado, onde se encontra?" placeholder="...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div> 
+    
+            <div class="tab radioOption">
+              <h1 class="pergunta">Quando tem que tomar uma decisão, ou tem um problema para resolver, decide sozinho ou fala com alguém?</h1>
+              <hr>
+              <p>
+                <label>Sozinho
+                  <input type="radio" name="Quando tem que tomar uma decisão, ou tem um problema para resolver, decide sozinho ou fala com alguém?" value="Sozinho" oninput="this.className = ''">
+                </label>
+                <label>Falo com alguém
+                  <input type="radio" name="Quando tem que tomar uma decisão, ou tem um problema para resolver, decide sozinho ou fala com alguém?" value="Falo com alguém" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+    
+    
+    
+            <div class="tab">
+              <h1 class="pergunta">Informação de Contacto</h1>
+              <hr>
+              Primeiro e último nome
+              <p><input type="text" name="name" placeholder="Primeiro e último nome..." oninput="this.className = ''"></p>
+              Email
+              <p><input type="email" name="email" placeholder="Introduz o teu email..." oninput="this.className = ''"></p>
+              Número de telemóvel
+              <p><input type="tel" name="telemóvel" oninput="this.className = ''"></p>
+            </div>
+    
+            
+            
+            
+            <div style="overflow:auto;">
+              <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Seguinte</button>
+              </div>
+            </div>
+            <span class="radioWarning" style="float:right;">Deves escolher pelo menos uma opção.</span>
+            
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+            
+            </form>
+    </div>
+
+    <footer>
+        <div class="comMargem">
+            <div class="footerCima">
+                <div class="navPaginaFooter">
+                    <p>Página</p>
+                    <a href="/">Início</a>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#formacoes">Formações</a>
+                    <a href="#certificacoes">Certificações</a>
+                    <a href="#testemunhos">Testemunhos</a>
+                    <a href="/relatorios-gratuitos.html">Relatórios Gratuitos</a>
+                </div>
+
+                <div class="navSuporteFooter">
+                    <p>Suporte</p>
+                    <a href="/termos-e-condicoes.html">Termos e Condições</a>
+                    <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+                    <a href="/contacto.html">Contacto</a>
+                </div>
+
+                <div class="navSeguirEmailFooter">
+                    <div class="seguirFooter">
+                        <p>Segue-nos</p>
+                        <div class="iconsFooter">
+                            <a href="https://www.facebook.com/LifeTrigger" target="blank">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/lifetrigger_lt/" target="blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCXt6RomOf9aAA6lfVm-djWA" target="blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="" target="blank">
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="emailFooter">
+                        <p>Email</p>
+                        <h4>ricardo.francisco@lifetrigger.pt</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <hr>
+                <div class="footerBaixo">
+                    <p>© LifeTrigger 2020 - Todos os direitos reservados</p>
+                    <p>
+                        Criado por 
+                        <a href="https://g-fleck.com" target="blank">g-fleck</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/formulario.js"></script>
+</body>
+</html>

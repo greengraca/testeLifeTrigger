@@ -1,0 +1,1025 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Fim do Reset */
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #efefef;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #86F6B9;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00AF50;
+}
+
+/* Início */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    height: 131px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 10%;
+    /* border: 1px red solid; */
+    transition: 0.6s ease;
+    z-index: 10;
+}
+
+.logo {
+    width: 10em;
+    transition: 0.5s;
+}
+
+.botoesNavegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.botoesNavegacao a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    transition: 0.3s;
+}
+
+.botoesNavegacao a:hover{
+    transform: translateY(-3px);
+    color: #86F6B9;
+}
+
+
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0 0 5rem 5rem;
+    z-index: -1;
+}
+.video-container video{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 0px 0px 20px 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(25, 25, 25, 0.55);
+}
+
+/* Landing Page */
+
+#landingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px red solid; */
+    height: 100vh;
+}
+
+.textoLandingPage {
+    font-weight: 500;
+}
+
+.textoLandingPage span {
+    position: absolute;
+    top: -1rem;
+    font-size: 10.6rem;
+    font-weight: 400;
+}
+.textoLandingPage h1{
+    position: relative;
+    font-size: 5.3rem;
+    text-transform: uppercase;
+    color: #00AF50;
+}
+
+.textoLandingPage h2{
+    font-size: 1.25rem;
+    color: #FFFFFF;
+}
+
+.textoLandingPage p {
+    margin-top: 0.4rem;
+    font-size: 0.88rem;
+    color: #00AF50;
+    
+}
+
+.fraseMotivadora{
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 2rem;
+    width: 80%;
+}
+
+/* Social */
+
+.socialLanding {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 25rem;
+}
+.iconsLanding{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconsLanding a {
+    color: #86F6B9;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+}
+
+.iconsLanding a:hover {
+    color: rgb(2, 218, 99);
+    transform: scale(1.2);
+}
+
+.iconsLanding i{
+    font-size: 2rem;
+    
+}
+
+
+/*Início Conteúdo*/
+
+.introducao {
+    margin-top: 5rem;
+    font-size: 4rem;
+    line-height: 127%;
+}
+
+.relatorios {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.25rem;
+    line-height: 150%;
+    /* border: 1px red solid; */
+}
+
+.esquerda,
+.direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.esquerda {
+    /* border: 1px green solid; */
+    margin-right: 2rem;
+}
+
+.direita {
+    /* border: 1px black solid; */
+    text-align: right;
+}
+
+.botaoRelatorio {
+    background-color: #000;
+    color: #B2E9CB;
+    border-radius: 2px;
+    margin-top: 3rem;
+    font-size: 1.88rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.botaoRelatorio:hover{
+    transform: translateY(-3px);
+}
+
+.paginaSobre {
+    margin-top: 10rem;
+}
+
+
+
+.paginaSobre h1 {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+
+.paginaSobre h2 {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+.paginaSobre h3 {
+    margin-top: 4rem;
+    font-size: 2.25rem;
+}
+
+/* Tecnologias */
+
+.areaTecnologias {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10rem;
+}
+
+.areaTecnologias img {
+    height: 43rem;
+}
+
+.tecnologias {
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.textoTecnologias {
+    margin-left: 2vw;
+    font-size: 1.5rem;
+}
+
+.botoesTecnologias {
+    margin-top: 3rem;
+}
+
+.botoesTecnologias h2{
+    padding: 1.8rem 0 1.8rem 2vw;
+    border-radius: 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 1.88rem;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 0.4rem 0.5rem 0 rgba(0,0,0,0.25);
+    transition: 0.2s ease-in;
+}
+
+.botoesTecnologias h2:hover{
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0.7rem 0.8rem 0 rgba(0,0,0,0.35);
+}
+
+#coachingTecnologia{
+    background: url('/imgs/leadership2000w.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#neurolinguisticaTecnologia{
+    background: url('/imgs/language2000w.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#timeLineTecnologia{
+    background: url('/imgs/time2000w.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#spiralTecnologia{
+    background: url('/imgs/spiral2000w.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#constelacoesTecnologia{
+    background: url('/imgs/constellations2000w.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Coaching */
+
+.areaCoaching {
+    background-color: #2C5E43;
+}
+
+.areaCoaching p {
+    margin-top: 1.5rem;
+    color: #e0e0e0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 135%;
+}
+
+.areaCoaching h2 {
+    margin-top: 5rem;
+    font-size: 2.25rem;
+    color: #fff;
+}
+
+.areaCoaching h3 {
+    margin-top: 3rem;
+
+    font-size: 2.25rem;
+    color: #fff;
+    line-height: 135%;
+
+}
+
+.botoesCoaching {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 50%; */
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+
+.botoesCoaching a {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    height: 7rem;
+    text-align: center;
+    /* border: 1px red solid; */
+}
+
+.botoesCoaching i {
+    color: #86F6B9;
+    font-size: 3rem;
+}
+
+.botoesCoaching p {
+    color: #86F6B9;
+    font-size: 0.88rem;
+}
+
+.cardCoaching {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #D3FAE5;
+    border-radius: 2.25rem;
+    box-shadow: 1px 1.25rem 1.5rem 0.25rem rgba(0, 0, 0, 0.34);
+    width: 100%;
+    display: none;
+}
+
+.imagemCardCoaching {
+    width: 30%;
+    border-left: 4px #5B5B5B solid;
+    border-radius: 0 2.25rem 2.25rem 0;
+}
+.cardCoaching img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 2.25rem 2.25rem 0;
+}
+
+.conteudoCoaching {
+    width: 70%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.conteudoCoaching h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #232321;
+    margin-top: 0;
+}
+
+.conteudoCoaching h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #232321;
+}
+
+.saberMaisCoaching {
+    margin-top: 3rem;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.saberMaisCoaching p {
+    font-size: 2.25rem;
+}
+
+.saberMaisCoaching a {
+    margin-top: 1rem;
+    padding: 1rem 2.5rem;
+    background-color: #fff;
+    text-decoration: none;
+    color: #343434;
+    font-size: 1.88rem;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.saberMaisCoaching a:hover {
+    box-shadow: 0 0.7rem 0.8rem 0 rgba(0,0,0,0.35);
+    transform: translateY(-2px);
+}
+
+/* Formações */
+.areaFormacoes {
+    margin-bottom: 10rem;
+}
+
+.gridFormacoes{
+    display: grid;
+    grid-template-columns: 30% 30% 35%;
+    gap: 2rem;
+    padding-top: 5rem;
+}
+
+.areaFormacoes h2{
+    font-size: 1.88rem;
+}
+
+.terceiraGrid{
+    grid-column: 3;
+    grid-row: 1/5;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.cardFormacoes{
+    width: 100%;
+    /* height: 14rem; */
+    /* padding: 20px 20px 20px 20px; */
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 4px;
+    border-top: 3px solid #00AF50;
+    box-shadow: 0rem 0.25rem 0.25rem 0 rgba(0, 0, 0, .25);
+}
+
+.cardFormacoes h2{
+    padding: 20px 20px 10px 20px;
+    color: #434343;
+    font-size: 1.4rem;
+    height: 4.2rem;
+}
+
+.cardFormacoes h3{
+    padding: 10px 20px 10px 20px;
+    line-height: 130%;
+    color: #606060;
+    font-size: 0.9rem;
+}
+
+.cardFormacoes a{
+    width: 100%;
+    /* padding: 20px; */
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1.5rem;
+    border-radius: 0px 0px 4px 4px;
+    background: #EDEDED;
+    color: #505551;
+    padding: 14px 0px 14px 0px;
+    transition: 0.3s;
+}
+.cardFormacoes a:hover{
+    background: #505551;
+    color: #EDEDED;
+}
+
+/* Certificações */
+.areaCertificacoes {
+    background-color: #2C5E43;
+}
+
+.areaCertificacoes .comMargem h2 {
+    margin-top: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.areaCertificacoes .comMargem p {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 130%;
+}
+
+.areaCertificacoes .comMargem ul {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 130%;
+    color: #fff;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.cardCertificacoes {
+    width: 30%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #FDFDFD;
+    border-radius: 0.4rem;
+    margin-top: 5rem;
+    padding: 2rem;
+    box-shadow: 0.25rem 0.25rem 0.7rem 0 rgba(0, 0, 0, .25);
+}
+
+.tituloCardCertificacoes {
+    font-size: 3rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagemCertificacoes {
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.descricaoCardCertificacoes {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+.linha2Descricao {
+    margin-top: 2rem;
+}
+
+.mutedCardCertificacoes {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #606060;
+    line-height: 130%;
+}
+
+.horasPrincipal {
+    margin-top: 3rem;
+    font-size: 1.88rem;
+    font-weight: 500;
+}
+
+.horasDistribuidas {
+    margin-top: 1.5rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.emBaixo {
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.cardCertificacoes a {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: #232724;
+    background-color: #EDEDED;
+    text-decoration: none;
+    width: 100%;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, .25);
+    transition: 0.2s;
+}
+
+.cardCertificacoes a:hover {
+    box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, .25);
+    transform: translateY(-3px);
+}
+
+/* Testemunhos */
+.swiper-slide{
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.areaTestemunhos {
+    margin-top: 3rem;
+}
+
+.cardTestemunho{
+    width: 80%;
+    height: 18rem;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    background-color: #FDFDFD;
+    border-top: 3px #00AF50 solid;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .2);
+}
+
+.cardTestemunho p{
+    font-size: 0.9rem;
+    color: #404040;
+    line-height: 130%;
+}
+.fotoTestemunho{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fotoTestemunho img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .2);
+}
+.nomeTestemunho{
+    margin-left: 1.2rem;
+}
+.nomeTestemunho p{
+    position: relative;
+    font-size: 1.1rem;
+    color: #404040;
+}
+
+.nomeTestemunho span{
+    position: absolute;
+    font-size: 0.7rem;
+    color: #9e9e9e;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 6rem;
+    background-color: #2C5E43;
+}
+
+
+
+footer .comMargem {
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.footerCima {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.footerCima p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #86F6B9;
+    margin-bottom: 2rem;
+}
+
+.footerCima a,
+footer h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fdfdfd;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.navPaginaFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.navSuporteFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.navSeguirEmailFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.seguirFooter {
+    width: 100%;
+}
+
+.iconsFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navSeguirEmailFooter a {
+    margin-right: 0.4rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.footerCima a:hover {
+    color: #86F6B9;
+}
+
+.navSeguirEmailFooter i {
+    font-size: 1.88rem;
+}
+
+.seguirFooter {
+    margin-bottom: 3.5rem;
+}
+
+.footerBaixo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #d8d8d8;
+}
+
+footer hr {
+    height: 1px;
+    background-color: #d8d8d8;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.footerBaixo a {
+    font-weight: 500;
+    color: #d8d8d8;
+    text-decoration: none;  
+}
+
+.footerBaixo a:hover {
+    color: #aaa;
+}
+
+/* Utilidades */
+
+.comMargem {
+    margin-left: 10%;
+    width: 80%;
+}
+
+.comMargemMenor {
+    margin-left: 8%;
+    width: 83%;
+}
+
+.extraBold {
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.navBarBranca {
+    background-color: #fff;
+    height: 4.25rem;
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.25);
+}
+
+.logoNavBranca {
+    width: 100px;
+}
+
+.botoesNavegacaoBranca {
+    color: #000 !important;
+}
+
+.botoesNavegacaoBranca:hover{
+    color: #00AF50 !important;
+}
+
+.categoria {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.categoriaBranca {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+}
+.categoriaPreto {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.italicGreen {
+    font-style: italic;
+    color: #86F6B9;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.coachingSelecionado {
+    color: #fff !important;
+}
+
