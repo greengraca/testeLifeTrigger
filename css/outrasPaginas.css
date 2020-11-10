@@ -158,6 +158,10 @@ body{
     z-index: 10;
 }
 
+.navBarMobile{
+    display: none;
+}
+
 .logo {
     width: 10em;
     transition: 0.5s;
@@ -317,7 +321,6 @@ footer h4 {
     justify-content: space-between;
     align-items: center;
 }
-
 .navSeguirEmailFooter a {
     margin-right: 0.4rem;
     margin-bottom: 0;
@@ -362,6 +365,85 @@ footer hr {
 
 .footerBaixo a:hover {
     color: #aaa;
+}
+
+    /* Contacto */
+.interiorContacto{
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.suporteContacto{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 4rem;
+}
+.suporteContacto h3{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.suporteContacto p {
+    margin-bottom: 1rem;
+}
+
+.botaoSuporte {
+    /* width: 100%; */
+    padding: 0.8rem;
+    text-align: center;
+    background-color: #2C5E43;
+    font-weight: 500;
+    box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.botaoSuporte:hover {
+    background-color: #3f835f;
+}
+
+.seguirContacto{
+    width: 30%;
+}
+
+.seguirContacto {
+    font-weight: 500;
+}
+
+.seguirContacto p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.iconsContacto{
+    display: flex;
+    /* width: 80%; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.iconsContacto a {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: #2C5E43;
+    transition: 0.3s;
+}
+
+.iconsContacto a:hover {
+    color: #000;
+}
+
+.iconsContacto i{
+    font-size: 2.5rem;
+
 }
 
 
