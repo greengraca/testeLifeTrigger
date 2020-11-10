@@ -317,8 +317,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 150%;
+    /* height: 15rem; */
     /* border: 1px red solid; */
 }
 
@@ -327,15 +328,17 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: stretch;
+    height: 13rem;
+    /* width: 40%; */
+    /* border: 1px red solid; */
 }
 .esquerda {
-    /* border: 1px green solid; */
+    /* flex-grow: 2; */
+    /* width: 80%; */
     margin-right: 2rem;
 }
 
 .direita {
-    /* border: 1px black solid; */
     text-align: right;
 }
 
@@ -343,7 +346,7 @@ body{
     background-color: #000;
     color: #B2E9CB;
     border-radius: 2px;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     font-size: 1.88rem;
     font-weight: 600;
     text-align: center;
@@ -357,7 +360,8 @@ body{
 }
 
 .paginaSobre {
-    margin-top: 10rem;
+    background-color: #2C5E43;
+    color: #fff;
 }
 
 
@@ -375,6 +379,7 @@ body{
 .paginaSobre h3 {
     margin-top: 4rem;
     font-size: 2.25rem;
+    margin-bottom: 3rem;
 }
 
 /* Tecnologias */
@@ -384,7 +389,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .areaTecnologias img {
@@ -458,6 +463,7 @@ body{
 
 .areaCoaching {
     background-color: #2C5E43;
+    /* background-color: red; */
 }
 
 .areaCoaching p {
@@ -470,14 +476,13 @@ body{
 
 .areaCoaching h2 {
     margin-top: 5rem;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
 .areaCoaching h3 {
     margin-top: 3rem;
-
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     color: #fff;
     line-height: 135%;
 
@@ -488,9 +493,10 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    /* width: 50%; */
     margin-bottom: 5rem;
     cursor: pointer;
+    /* border: 1px black solid; */
+    width: 100%;
 }
 
 .botoesCoaching a {
@@ -499,15 +505,16 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 10rem;
+    /* width: 9rem; */
     height: 7rem;
     text-align: center;
-    /* border: 1px red solid; */
+    /* border: 1px blue solid; */
 }
 
 .botoesCoaching i {
     color: #86F6B9;
     font-size: 3rem;
+    /* border: 1px red solid; */
 }
 
 .botoesCoaching p {
@@ -593,7 +600,7 @@ body{
 
 /* Formações */
 .areaFormacoes {
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
 }
 
 .gridFormacoes{
@@ -604,7 +611,7 @@ body{
 }
 
 .areaFormacoes h2{
-    font-size: 1.88rem;
+    font-size: 1.5rem;
 }
 
 .terceiraGrid{
@@ -617,8 +624,6 @@ body{
 
 .cardFormacoes{
     width: 100%;
-    /* height: 14rem; */
-    /* padding: 20px 20px 20px 20px; */
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -645,7 +650,6 @@ body{
 
 .cardFormacoes a{
     width: 100%;
-    /* padding: 20px; */
     text-decoration: none;
     text-align: center;
     margin-top: 1.5rem;
@@ -654,6 +658,7 @@ body{
     color: #505551;
     padding: 14px 0px 14px 0px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .cardFormacoes a:hover{
     background: #505551;
@@ -688,7 +693,7 @@ body{
 }
 
 .cardCertificacoes {
-    width: 30%;
+    width: 32%;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -785,7 +790,7 @@ body{
 }
 
 .cardTestemunho{
-    width: 80%;
+    width: 85%;
     height: 18rem;
     padding: 20px;
     margin: auto;
@@ -812,7 +817,6 @@ body{
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    /* object-fit: cover; */
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .2);
 }
 .nomeTestemunho{
@@ -829,6 +833,7 @@ body{
     font-size: 0.7rem;
     color: #9e9e9e;
 }
+
 
 /* Footer */
 
@@ -1023,3 +1028,12 @@ footer hr {
     color: #fff !important;
 }
 
+.enviarMensagem {
+    cursor: pointer;
+}
+
+/* Mobile */
+
+.navBarMobile {
+    display: none;
+}
