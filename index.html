@@ -13,7 +13,8 @@
 
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="217a7822-2a27-45ce-9611-1572fe1f76eb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
-<body>
+<body id="body">
+    <div class="wrapper">
     <header>
         
         <div class="navBar"> 
@@ -31,14 +32,26 @@
                 <a href="/contacto.html">Contacto</a>
             </div>
         </div>
-        <div class="navBarMobile">
-            <img src="/imgs/lifetrigger.png" class="logo">
-            <div class="burguer">
-                <div class="risco"></div>
-                <div class="risco"></div>
-                <div class="risco"></div>
-            </div>
-        </div>
+        
+        <nav class="navBarMobile">
+            <img src="/imgs/lifetrigger.png" class="logoMobile">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <ul id="menu">
+                          <li><a href="/">Início</a></li>
+                          <li><a href="#coaching">Coaching</a></li>
+                          <li><a href="#formacoes">Formações</a></li>
+                          <li><a href="#certificacoes">Certificados</a></li>
+                          <li><a href="#testemunhos">Testemunhos</a></li>
+                          <li><a href="/contacto.html">Contactos</a></li>
+                      </ul>
+                  
+                 </div>
+            
+          </nav>
     </header>
     
     <div id="landingPage">
@@ -380,8 +393,7 @@
                 </p>
             </div>
 
-            <div class="comMargemMenor" 
-                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8rem;">
+            <div class="flexCertificacoes comMargemMenor">
 
                 <div class="cardCertificacoes" data-aos="zoom-in">
                     <div class="tituloCardCertificacoes">
@@ -675,6 +687,7 @@
             </div>
         </div>
     </footer>
+</div>
 
     <script src="js/crisp.js"></script>
     <script src="js/navbar.js"></script>
