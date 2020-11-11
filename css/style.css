@@ -89,7 +89,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -143,6 +143,12 @@ html {
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #efefef;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    /* position: relative; */
+    overflow-x: hidden;
 }
 
 .navBar {
@@ -200,7 +206,7 @@ body{
     min-height: 100%;
     object-fit: cover;
     position: absolute;
-    border-radius: 0px 0px 20px 20px;
+    /* border-radius: 0px 0px 20px 20px; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -213,7 +219,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 0px 0px 20px 20px;
+    /* border-radius: 0px 0px 20px 20px; */
     background: rgba(25, 25, 25, 0.55);
 }
 
@@ -666,6 +672,12 @@ body{
 }
 
 /* Certificações */
+.flexCertificacoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8rem;
+}
 .areaCertificacoes {
     background-color: #2C5E43;
 }
@@ -1034,6 +1046,434 @@ footer hr {
 
 /* Mobile */
 
+
 .navBarMobile {
     display: none;
+    height: 55px;
+    background: #fdfdfd;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+
+.logoMobile {
+    width: 5rem;
+    margin-left: 4%;;
+}
+
+#menuToggle {
+    /* margin-right: 2vw; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* top: 50px; */
+    right: 15px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#menuToggle span {
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #222222;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 340px;
+  height: 806px;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -254px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #F5F6FA;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+#menu li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #333333;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+@media only screen and (min-width: 1440px) {
+    .comMargem {
+        /* margin-left: 15%; */
+        width: 65%;
+        margin: auto;
+    }
+    .comMargemMenor {
+        /* margin-left: 13%; */
+        width: 68%;
+        margin: auto;
+    }
+    .cardCertificacoes {
+        height: 71vh;
+    }
+
+    .areaTecnologias {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navBar{
+        display: none;
+    }
+    .navBarMobile{
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        border-radius: 0 0 2rem 2rem;
+    }
+
+
+    #landingPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        /* border: 1px red solid; */
+        height: 100vh;
+    }
+
+    .textoLandingPage {
+        font-weight: 500;
+        margin-bottom: 10rem;
+    }
+    
+    .textoLandingPage span {
+        font-size: 6.5rem;
+    }
+
+    .textoLandingPage h1{
+        font-size: 3rem;
+    }
+    
+    .textoLandingPage h2{
+        font-size: 0.9rem;
+    }
+    
+    /* .textoLandingPage p {
+        font-size: 0.88rem;
+    } */
+    
+    .fraseMotivadora{
+        font-size: 1rem;
+        font-weight: 300;
+        bottom: 8rem;
+    }
+
+    .socialLanding {
+        position: absolute;
+        bottom: 2rem;
+        right: calc(50% - 7.5rem);
+        /* margin: auto 0; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        width: 15rem;
+        /* border: 1px red solid; */
+    }
+
+    .mouse {
+        display: none;
+    }
+
+    .iconsLanding{
+        flex-direction: row;
+        width: 15rem;
+        /* border-left: 1px red solid; */
+    }
+    
+    .iconsLanding a {
+        color: #fff;
+        margin-bottom: 1rem;
+        /* margin-left: 1rem; */
+    }
+    
+    /* .iconsLanding a:hover {
+        color: rgb(2, 218, 99);
+        transform: scale(1.2);
+    } */
+    
+    /* .iconsLanding i{
+        font-size: 2rem;
+    } */
+
+    .introducao{
+        /* margin-top: unset; */
+        font-size: 2rem;
+        line-height: 127%;
+    }
+
+    .relatorios{
+        margin-top: 6rem;
+        flex-direction: column;
+    }
+    .botaoRelatorio{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .esquerda{
+        width: 100%;
+        margin-right: unset;
+    }
+    .esquerda, .direita{
+        height: unset;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .direita{
+        margin-top: 2.6rem;
+    }
+
+    /* Lifetrigger */
+.tecnologias{
+    margin-right: unset;
+}
+.areaTecnologias img{
+    display: none;
+}
+.botoesTecnologias h2{
+    font-size: 1.4rem;
+}
+
+/* Coaching */
+
+
+.areaCoaching p {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.areaCoaching h2 {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.areaCoaching h3 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 135%;
+
+}
+
+.botoesCoaching {
+    margin-bottom: 2.5rem;
+}
+
+.botoesCoaching a {
+    margin-top: 2.5rem;
+    height: 6rem;
+    padding: 0.5rem;
+}
+
+.botoesCoaching i {
+    font-size: 2rem;
+}
+
+.botoesCoaching p {
+    color: #86F6B9;
+    font-size: 0.88rem;
+}
+
+.cardCoaching {
+    flex-direction: column-reverse;
+}
+
+.imagemCardCoaching {
+    width: 100%;
+    height: 8rem;
+    border-left: unset;
+    border-bottom: 4px #5B5B5B solid;
+    border-radius:  2.25rem 2.25rem 0 0;
+}
+.cardCoaching img {
+    border-radius: 2.25rem 2.25rem 0 0;
+}
+
+.conteudoCoaching {
+    width: 100%;
+
+}
+
+
+.conteudoCoaching h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #232321;
+    margin-top: 0;
+}
+
+.conteudoCoaching h3 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #232321;
+}
+
+.saberMaisCoaching {
+    margin-top: 2rem;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.saberMaisCoaching p {
+    font-size: 1.2rem;
+}
+
+.saberMaisCoaching a {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+
+/* Formações */
+.areaFormacoes{
+    margin-top: 2rem;
+}
+
+.areaFormacoes h2{
+    font-size: 1.2rem;
+    /* font-weight: 600; */
+}
+
+.gridFormacoes{
+    grid-template-columns: 100%;
+}
+.terceiraGrid{
+    display: none;
+}
+
+/* Certificacoes */
+.flexCertificacoes{
+    flex-direction: column;
+}
+
+.areaCertificacoes .comMargem h2 {
+    margin-top: 1rem;
+    font-weight: 400;
+    /* color: #fff; */
+    font-size: 0.88rem;
+}
+
+.areaCertificacoes .comMargem p {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    /* color: #fff; */
+    line-height: 150%;
+}
+
+.areaCertificacoes .comMargem ul {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 150%;
+    /* color: #fff; */
+    /* list-style: disc; */
+    /* list-style-position: inside; */
+}
+
+.cardCertificacoes{
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+    /* Footer */
+footer .comMargem{
+    height: unset;
+}
+.footerCima{
+    flex-direction: column;
+}
+.navSuporteFooter{
+    margin-top: 2rem;
+}
+.navSeguirEmailFooter{
+    width: 100%;
+}
+.iconsFooter{
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+.iconsFooter i{
+    font-size: 2.3rem;
+}
+.seguirFooter p{
+    display: none;
+}
+.emailFooter{
+    display: none;
+}
+    /* Utilities */
+    .categoria, .categoriaPreto, .categoriaBranca{
+        font-size: 2.4rem;
+    }
 }

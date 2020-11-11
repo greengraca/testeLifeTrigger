@@ -3,9 +3,14 @@ var swiper = new Swiper('.swiper-container', {
     centeredSlides: true,
     breakpoints: {
         800: {
+            slidesPerView: 2,
+            centeredSlides: false
+        },
+        1100: {
             slidesPerView: 3,
             centeredSlides: true
         }
+
     },
     pagination: {
         el: '.swiper-pagination',
