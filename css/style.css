@@ -1152,6 +1152,22 @@ footer hr {
   transform: none;
 }
 
+.gFleckMobile {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #d8d8d8;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.gFleckMobile a {
+    font-weight: 500;
+    color: #d8d8d8;
+    text-decoration: none;  
+}
+
+
 @media only screen and (min-width: 1440px) {
     .comMargem {
         /* margin-left: 15%; */
@@ -1472,8 +1488,25 @@ footer .comMargem{
 .emailFooter{
     display: none;
 }
-    /* Utilities */
-    .categoria, .categoriaPreto, .categoriaBranca{
-        font-size: 2.4rem;
-    }
+
+.gFleckPC {
+    display: none;
 }
+
+.gFleckMobile {
+    display: block;
+}
+
+/* Utilities */
+.categoria, .categoriaPreto, .categoriaBranca{
+        font-size: 2.4rem;
+}
+
+
+
+
+}
+
+
+
+
