@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -59,11 +59,11 @@
     src: url('../fonts/Poppins-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
-}
+} */
 
 
 /* Reset */
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -82,9 +82,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
+} */
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+/* article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -105,34 +105,34 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+} */
 
 /* Fim do Reset */
 
 /* ScrollBar */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 6px;
-}
+} */
   
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background: #efefef;
-}
+} */
   
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
     background: #86F6B9;
-}
+} */
   
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
     background: #00AF50;
-}
+} */
 
 /* Início */
 
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -143,12 +143,11 @@ html {
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #fbfbfb;
-}
+} */
 
-.navBar {
+.navBarOutrasPaginas {
     position: fixed;
     width: 100%;
-    /* height: 131px; */
     display: flex;
     top: 0;
     justify-content: space-between;
@@ -156,18 +155,16 @@ body{
     padding: 0rem 10%;
     transition: 0.6s ease;
     z-index: 10;
+    background-color: #fff;
+    height: 4.25rem;
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.25);
 }
 
-.navBarMobile{
-    display: none;
+.logoOutrasPaginas {
+    width: 100px;
 }
 
-.logo {
-    width: 10em;
-    transition: 0.5s;
-}
-
-.botoesNavegacao {
+/* .botoesNavegacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -186,7 +183,7 @@ body{
 .botoesNavegacao a:hover{
     transform: translateY(-3px);
     color: #86F6B9;
-}
+} */
 
 .imagemPrincipal {
     margin-top: 4.25rem;
@@ -202,13 +199,7 @@ body{
     position: absolute;
 }
 
-.imagemPrincipal h2 {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    text-align: right;
-    font-size: 3rem;
-}
+
 
 .politicaTermos {
     line-height: 140%;
@@ -223,6 +214,7 @@ body{
     font-size: 1.88rem;
     font-weight: 600;
     margin-bottom: 2rem;
+    line-height: 130%;
 }
 
 .politicaTermos h3 {
@@ -247,12 +239,19 @@ body{
     margin-bottom: 1.5rem;
 }
 
+.relatoriosInspiracao {
+    margin-top: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    /* font-weight: 500; */
+}
+
 
 
 
 /* Footer */
 
-footer {
+/* footer {
     margin-top: 6rem;
     background-color: #2C5E43;
 }
@@ -365,22 +364,22 @@ footer hr {
 
 .footerBaixo a:hover {
     color: #aaa;
-}
+} */
 
-    /* Contacto */
+/* Contacto */
 .interiorContacto{
     display: flex;
     justify-content: space-between;
-    /* margin: auto; */
     width: 100%;
-    /* border: 1px solid black; */
 }
+
 .suporteContacto{
     display: flex;
     flex-direction: column;
     width: 40%;
     margin-right: 4rem;
 }
+
 .suporteContacto h3{
     margin-bottom: 2rem;
     font-size: 2rem;
@@ -392,7 +391,6 @@ footer hr {
 }
 
 .botaoSuporte {
-    /* width: 100%; */
     padding: 0.8rem;
     text-align: center;
     background-color: #2C5E43;
@@ -425,7 +423,6 @@ footer hr {
 
 .iconsContacto{
     display: flex;
-    /* width: 80%; */
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -453,7 +450,7 @@ footer hr {
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
-
+/* 
 .comMargem {
     margin-left: 10%;
     width: 80%;
@@ -476,11 +473,6 @@ footer hr {
     font-weight: 600;
 }
 
-.navBarBranca {
-    background-color: #fff;
-    height: 4.25rem;
-    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.25);
-}
 
 .logoNavBranca {
     width: 100px;
@@ -521,7 +513,7 @@ footer hr {
 
 .light {
     font-weight: 300;
-}
+} */
 
 /* Relatórios */
 
@@ -529,6 +521,7 @@ footer hr {
     margin-top: 4rem;
     font-size: 4rem;
     line-height: 140%;
+    text-align: center;
 }
 
 .containerRelatorios {
@@ -543,7 +536,6 @@ footer hr {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    /* padding: 1rem 1rem 0 1rem; */
     border-top: 4px solid #00AF50;
     border-radius: 0.32rem;
     background-color: #fff;
@@ -582,3 +574,4 @@ footer hr {
 .cardRelatorios a:hover {
     background-color: #92f082;
 }
+
