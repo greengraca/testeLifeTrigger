@@ -30,9 +30,14 @@ function nextPrev(n) {
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
   // if you have reached the end of the form... :
-  if (currentTab >= x.length) {
+  if (currentTab >= x.length && document.querySelector("#perfilForm")) {
     //...the form gets submitted:
     document.getElementById("perfilForm").submit();
+    return false;
+  }
+  if (currentTab >= x.length && document.querySelector("#comunicacaoForm")) {
+    //...the form gets submitted:
+    document.getElementById("comunicacaoForm").submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -46,7 +51,9 @@ var areaDaVida
 
 var radioWarning = document.querySelector(".radioWarning")
 
-console.log(document.getElementsByClassName("tab").length)
+let visual = 0
+let auditivo = 0
+let cinestesico = 0
 
 function validateForm() {
   // This function deals with validation of the form fields
@@ -57,7 +64,13 @@ function validateForm() {
   var radios = x[currentTab].querySelectorAll('input[type="radio"]:checked');
   var checked = radios.length > 0 ? true : false;
 
-  if(currentTab == 0) {
+  radios.forEach (radio => {
+    if(radio.value == "Visual") visual++
+    if(radio.value == "Auditivo") auditivo++
+    if(radio.value == "Cinestesico") cinestesico++
+  })
+
+  if(currentTab == 0 && document.querySelector("#perfilForm")) {
     areaDaVida = x[0].querySelector('input[type="radio"]:checked') ? x[0].querySelector('input[type="radio"]:checked').value : ""
     oQueProcuraPergunta.innerHTML = `O que procura na área em questão? (${areaDaVida})`
     situacaoMuitoMotivadoPergunta.innerHTML = `Fale-me de uma situação da actividade em questão (${areaDaVida}) em que se sentia muito feliz e motivado`
@@ -73,7 +86,7 @@ function validateForm() {
       radioWarning.style.display = "block"
       // and set the current valid status to false:
       valid = false;
-    } else if (y[i].value == "") {
+    } else if (y[i].value == "" && !y[i].classList.contains("resultadoValido")) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false:
@@ -97,6 +110,13 @@ function validateForm() {
     document.getElementsByClassName("step")[currentTab].className += " finish";
     radioWarning.style.display = "none"
   }
+
+  if(currentTab == 13 && document.querySelector("#comunicacaoForm")) {
+    document.querySelector("#visual").value = visual
+    document.querySelector("#auditivo").value = auditivo
+    document.querySelector("#cinestesico").value = cinestesico
+  }
+
   return valid; // return the valid status
 }
 
@@ -117,11 +137,16 @@ let temAgenda = document.querySelector("#temAgenda")
 let naoTemAgenda = document.querySelector("#naoTemAgenda")
 let agendaHidden = document.querySelector("#agendaHidden")
 
-temAgenda.addEventListener("input", () => {
-  agendaHidden.removeAttribute("hidden")
-})
+if(temAgenda) {
+  temAgenda.addEventListener("input", () => {
+    agendaHidden.removeAttribute("hidden")
+  })
+}
 
-naoTemAgenda.addEventListener("input", () => {
-  agendaHidden.hidden = true
-})
+if(naoTemAgenda) {
+
+  naoTemAgenda.addEventListener("input", () => {
+    agendaHidden.hidden = true
+  })
+}
 

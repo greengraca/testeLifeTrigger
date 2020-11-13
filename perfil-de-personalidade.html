@@ -46,9 +46,7 @@
                   <li><a href="#testemunhos">Testemunhos</a></li>
                   <li><a href="/contacto.html">Contactos</a></li>
               </ul>
-
           </div>
-
       </nav>
 
         <div class="imagemPrincipal">
@@ -61,7 +59,7 @@
         <p>O que te faz mexer ? O que te motiva ?</p>
         <p>Responde a estas questões para receberes um <span class="semiBold">relatório profissional gratuito</span>.</p>
     
-        <form id="perfilForm" name="testForm" action="/obrigado.html" netlify>
+        <form id="perfilForm" name="Perfil de Personalidade" action="/obrigado.html" netlify>
         
             <!-- One "tab" for each step in the form: -->
             <div class="tab radioOption">
@@ -226,7 +224,7 @@
             </div>
     
             <div class="tab">
-              <h1 class="pergunta">Com que frequência têm que demonstrar competência até que seja convencido? **</h1>
+              <h1 class="pergunta">Com que frequência têm que demonstrar competência até que seja convencido?</h1>
               <hr>
               <p>
                 <textarea name="Com que frequência têm que demonstrar competência até que seja convencido?" placeholder="Sei...." cols="40" rows="5"
@@ -276,7 +274,7 @@
             </div>
     
             <div class="tab">
-              <h1 class="pergunta">Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age? **</h1>
+              <h1 class="pergunta">Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age?</h1>
               <hr>
               <p>
                 <textarea name="Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age?" placeholder="Sei...." cols="40" rows="8"
@@ -309,29 +307,10 @@
             </div> 
     
             <div class="tab">
-              <h1 class="pergunta">Fale-me do seu restaurante favorito **</h1>
+              <h1 class="pergunta">Fale-me do seu restaurante favorito</h1>
               <hr>
               <p>
-                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
-                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
-                  style="resize: none;"></textarea>
-              </p>
-              
-    
-              <hr>
-              <h1 class="pergunta">xyz</h1>
-              <hr>
-              <p>
-                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
-                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
-                  style="resize: none;"></textarea>
-              </p>
-    
-              <hr>
-              <h1 class="pergunta">xyz</h1>
-              <hr>
-              <p>
-                <textarea name="Outra situação da actividade em questão em que se sentia muito feliz e motivado" placeholder="Sei...." cols="40" rows="8"
+                <textarea name="Fale-me do seu restaurante favorito" placeholder="Sei...." cols="40" rows="8"
                   oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
                   style="resize: none;"></textarea>
               </p>
@@ -353,7 +332,7 @@
             </div>
     
             <div class="tab radioOption">
-              <h1 class="pergunta">Precisaria mesmo de saber a ideia geral ou os detalhes? **</h1>
+              <h1 class="pergunta">Precisaria <span class="semiBold">mesmo</span> de saber a ideia geral ou os detalhes?</h1>
               <hr>
               <p>
                 <label>Ideia Geral
@@ -361,6 +340,20 @@
                 </label>
                 <label>Detalhes
                   <input type="radio" name="Precisaria mesmo de saber a ideia geral ou os detalhes?" value="Detalhes" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+
+            <div class="tab radioOption">
+              <h1 class="pergunta">Numa situação nova, nota primeiro as semelhanças ou as diferenças?</h1>
+              <hr>
+              <p>
+                <label>As semelhanças
+                  <input type="radio" name="Numa situação nova, nota primeiro as semelhanças ou as diferenças?" value="As semelhanças" oninput="this.className = ''">
+                </label>
+                <label>As diferenças
+                  <input type="radio" name="Numa situação nova, nota primeiro as semelhanças ou as diferenças?" value="As diferenças" oninput="this.className = ''">
                 </label>
               </p>
               <hr>
@@ -381,7 +374,7 @@
               <h1 class="pergunta">Linha do Tempo. Imagine uma memória do seu passado, onde se encontra? **</h1>
               <hr>
               <p>
-                <textarea name="Linha do Tempo. Imagine uma memória do seu passado, onde se encontra?" placeholder="...." cols="40" rows="8"
+                <textarea name="Linha do Tempo. Imagine uma memória do seu passado, onde se encontra?" placeholder="Atrás de si ? Á frente ? Direita, esquerda ?" cols="40" rows="8"
                   oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
                   style="resize: none;"></textarea>
               </p>
@@ -401,18 +394,37 @@
               </p>
               <hr>
             </div>
+
+            <div class="tab">
+              <h1 class="pergunta">Qual foi a última coisa que disse a si mesmo, antes de sair da cama esta manhã?</h1>
+              <hr>
+              <p>
+                <textarea name="Qual foi a última coisa que disse a si mesmo, antes de sair da cama esta manhã?" placeholder="...." cols="40" rows="8"
+                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
+                  style="resize: none;"></textarea>
+              </p>
+              <hr>
+            </div> 
     
     
     
             <div class="tab">
               <h1 class="pergunta">Informação de Contacto</h1>
-              <hr>
+              <hr style="margin-bottom: 2rem;">
               Primeiro e último nome
-              <p><input type="text" name="name" placeholder="Primeiro e último nome..." oninput="this.className = ''"></p>
+              <p style="margin-bottom: 2rem;">
+                <input type="text" name="name" placeholder="Primeiro e último nome..." style="margin-top: 1rem;"
+                  oninput="this.className = ''">
+              </p>
               Email
-              <p><input type="email" name="email" placeholder="Introduz o teu email..." oninput="this.className = ''"></p>
+              <p style="margin-bottom: 2rem;">
+                <input type="email" name="email" placeholder="Introduz o teu email..." style="margin-top: 1rem;"
+                  oninput="this.className = ''">
+              </p>
               Número de telemóvel
-              <p><input type="tel" name="telemóvel" oninput="this.className = ''"></p>
+              <p style="margin-bottom: 2rem;">
+                <input type="tel" name="telemóvel" oninput="this.className = ''" style="margin-top: 1rem;">
+              </p>
             </div>
     
             
@@ -428,6 +440,8 @@
             
             <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
