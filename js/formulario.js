@@ -111,7 +111,7 @@ function validateForm() {
     radioWarning.style.display = "none"
   }
 
-  if(currentTab == 13 && document.querySelector("#comunicacaoForm")) {
+  if(currentTab == 12 && document.querySelector("#comunicacaoForm")) {
     document.querySelector("#visual").value = visual
     document.querySelector("#auditivo").value = auditivo
     document.querySelector("#cinestesico").value = cinestesico
