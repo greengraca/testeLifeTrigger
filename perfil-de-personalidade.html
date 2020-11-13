@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="/css/outrasPaginas.css">
     <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <script type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "217a7822-2a27-45ce-9611-1572fe1f76eb"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
 </head>
 <body>
     <header>
-        <div class="navBar navBarBranca"> 
+        <nav class="navBarOutrasPaginas"> 
             
-            <img src="/imgs/lifetrigger.png" class="logo logoNavBranca">
+            <img src="/imgs/lifetrigger.png" class="logoOutrasPaginas">
             
             
             <div class="botoesNavegacao"> <!-- flex, space evenly-->
@@ -24,19 +28,40 @@
                 <a href="/#testemunhos" class="botoesNavegacaoBranca">Testemunhos</a>
                 <a href="/contacto.html" class="botoesNavegacaoBranca">Contacto</a>
             </div>
-        </div>
+          </nav>
+
+
+        <nav class="navBarMobile">
+          <img src="/imgs/lifetrigger.png" class="logoMobile">
+          <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                  <li><a href="/">Início</a></li>
+                  <li><a href="#coaching">Coaching</a></li>
+                  <li><a href="#formacoes">Formações</a></li>
+                  <li><a href="#certificacoes">Certificados</a></li>
+                  <li><a href="#testemunhos">Testemunhos</a></li>
+                  <li><a href="/contacto.html">Contactos</a></li>
+              </ul>
+
+          </div>
+
+      </nav>
 
         <div class="imagemPrincipal">
             <img src="/imgs/personalityB2000w.jpg" alt="">
         </div>
     </header>
 
-    <div class="comMargem">
+    <div class="comMargem" style="display: flex; flex-direction: column; align-items: center;">
         <h2 class="categoriaPreto etiqueta">Perfil de Personalidade</h2>
         <p>O que te faz mexer ? O que te motiva ?</p>
         <p>Responde a estas questões para receberes um <span class="semiBold">relatório profissional gratuito</span>.</p>
     
-        <form id="regForm" name="testForm" action="/obrigado.html" netlify>
+        <form id="perfilForm" name="testForm" action="/obrigado.html" netlify>
         
             <!-- One "tab" for each step in the form: -->
             <div class="tab radioOption">
@@ -430,66 +455,75 @@
     </div>
 
     <footer>
-        <div class="comMargem">
-            <div class="footerCima">
-                <div class="navPaginaFooter">
-                    <p>Página</p>
-                    <a href="/">Início</a>
-                    <a href="/#coaching">Coaching</a>
-                    <a href="/#formacoes">Formações</a>
-                    <a href="/#certificacoes">Certificações</a>
-                    <a href="/#testemunhos">Testemunhos</a>
-                    <a href="/relatorios-gratuitos.html">Relatórios Gratuitos</a>
-                </div>
+      <div class="comMargem">
+          <div class="footerCima">
+              <div class="navPaginaFooter">
+                  <p>Página</p>
+                  <a href="/">Início</a>
+                  <a href="#coaching">Coaching</a>
+                  <a href="#formacoes">Formações</a>
+                  <a href="#certificacoes">Certificações</a>
+                  <a href="#testemunhos">Testemunhos</a>
+                  <a href="/relatorios-gratuitos.html">Relatórios Gratuitos</a>
+              </div>
 
-                <div class="navSuporteFooter">
-                    <p>Suporte</p>
-                    <a href="/termos-e-condicoes.html">Termos e Condições</a>
-                    <a href="/politica-de-privacidade.html">Política de Privacidade</a>
-                    <a href="/contacto.html">Contacto</a>
-                </div>
+              <div class="navSuporteFooter">
+                  <p>Suporte</p>
+                  <a href="/termos-e-condicoes.html">Termos e Condições</a>
+                  <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+                  <a href="/contacto.html">Contacto</a>
+              </div>
 
-                <div class="navSeguirEmailFooter">
-                    <div class="seguirFooter">
-                        <p>Segue-nos</p>
-                        <div class="iconsFooter">
-                            <a href="https://www.facebook.com/LifeTrigger" target="blank">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                            <a href="https://pt.linkedin.com/in/lifetrigger-forma%C3%A7%C3%A3o-orienta%C3%A7%C3%A3o-integra%C3%A7%C3%A3o-418773120" target="blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.instagram.com/lifetrigger_lt/" target="blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.youtube.com/channel/UCXt6RomOf9aAA6lfVm-djWA" target="blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="https://open.spotify.com/show/5FV3byG8PVjTcIeO1CI6pR" target="blank">
-                                <i class="fab fa-spotify"></i>
-                            </a>
-                        </div>
-                    </div>
+              <div class="navSeguirEmailFooter">
+                  <div class="seguirFooter">
+                      <p>Segue-nos</p>
+                      <div class="iconsFooter">
+                          <a href="https://www.facebook.com/LifeTrigger" target="blank">
+                              <i class="fab fa-facebook-square"></i>
+                          </a>
+                          <a href="https://pt.linkedin.com/in/lifetrigger-forma%C3%A7%C3%A3o-orienta%C3%A7%C3%A3o-integra%C3%A7%C3%A3o-418773120"
+                              target="blank">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="https://www.instagram.com/lifetrigger_lt/" target="blank">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="https://www.youtube.com/channel/UCXt6RomOf9aAA6lfVm-djWA" target="blank">
+                              <i class="fab fa-youtube"></i>
+                          </a>
+                          <a href="https://open.spotify.com/show/5FV3byG8PVjTcIeO1CI6pR" target="blank">
+                              <i class="fab fa-spotify"></i>
+                          </a>
+                      </div>
+                  </div>
 
-                    <div class="emailFooter">
-                        <p>Email</p>
-                        <h4>geral@lifetrigger.pt</h4>
-                    </div>
-                </div>
-            </div>
-            
-            <div>
-                <hr>
-                <div class="footerBaixo">
-                    <p>© LifeTrigger 2020 - Todos os direitos reservados</p>
-                    <p>
-                        Criado por 
-                        <a href="https://g-fleck.com" target="blank">g-fleck</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+                  <div class="emailFooter">
+                      <p>Email</p>
+                      <h4>geral@lifetrigger.pt</h4>
+                  </div>
+              </div>
+          </div>
+
+          <div>
+              <p class="gFleckMobile">
+                  Criado por
+                  <a href="https://g-fleck.com" target="blank">g-fleck</a>
+              </p>
+              <hr>
+              <div class="footerBaixo">
+                  <p class="copyrightPC">© LifeTrigger 2020 - Todos os direitos reservados</p>
+                  <p class="copyrightMobile">
+                      © LifeTrigger 2020<br>
+                      Todos os direitos reservados
+                  </p>
+                  <p class="gFleckPC">
+                      Criado por
+                      <a href="https://g-fleck.com" target="blank">g-fleck</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </footer>
 
     <script src="js/formulario.js"></script>
 </body>

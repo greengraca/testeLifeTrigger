@@ -32,7 +32,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("regForm").submit();
+    document.getElementById("perfilForm").submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -52,7 +52,7 @@ function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
+  y = x[currentTab].querySelectorAll("#perfilForm input");
   z = x[currentTab].getElementsByTagName("textarea")
   var radios = x[currentTab].querySelectorAll('input[type="radio"]:checked');
   var checked = radios.length > 0 ? true : false;
