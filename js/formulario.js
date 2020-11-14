@@ -1,6 +1,9 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
+let comunicacaoForm = document.querySelector("#comunicacaoForm")
+let perfilForm = document.querySelector("#perfilForm")
+
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
@@ -30,12 +33,12 @@ function nextPrev(n) {
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
   // if you have reached the end of the form... :
-  if (currentTab >= x.length && document.querySelector("#perfilForm")) {
+  if (currentTab >= x.length && perfilForm) {
     //...the form gets submitted:
     document.getElementById("perfilForm").submit();
     return false;
   }
-  if (currentTab >= x.length && document.querySelector("#comunicacaoForm")) {
+  if (currentTab >= x.length && comunicacaoForm) {
     //...the form gets submitted:
     document.getElementById("comunicacaoForm").submit();
     return false;
@@ -57,10 +60,11 @@ let cinestesico = 0
 
 function validateForm() {
   // This function deals with validation of the form fields
-  var x, y, i, valid = true;
+  var x, y, i, c, z, valid = true;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].querySelectorAll("#perfilForm input");
-  z = x[currentTab].getElementsByTagName("textarea")
+  c = x[currentTab].querySelectorAll("#comunicacaoForm input");
+  z = x[currentTab].getElementsByTagName("textarea");
   var radios = x[currentTab].querySelectorAll('input[type="radio"]:checked');
   var checked = radios.length > 0 ? true : false;
 
@@ -70,7 +74,7 @@ function validateForm() {
     if(radio.value == "Cinestesico") cinestesico++
   })
 
-  if(currentTab == 0 && document.querySelector("#perfilForm")) {
+  if(currentTab == 0 && perfilForm) {
     areaDaVida = x[0].querySelector('input[type="radio"]:checked') ? x[0].querySelector('input[type="radio"]:checked').value : ""
     oQueProcuraPergunta.innerHTML = `O que procura na área em questão? (${areaDaVida})`
     situacaoMuitoMotivadoPergunta.innerHTML = `Fale-me de uma situação da actividade em questão (${areaDaVida}) em que se sentia muito feliz e motivado`
@@ -105,13 +109,25 @@ function validateForm() {
     } 
     
   }
+
+  for(i = 0; i < c.length; i++){
+    if(c[i].type === 'radio' && !checked){
+      c[i].className += " invalid";
+      radioWarning.style.display = "block"
+      valid = false;
+    }else if(c[i].value == "" && !c[i].classList.contains("resultadoValido")){
+      c[i].className += " invalid";
+      valid = false
+    }
+  }
+
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
     radioWarning.style.display = "none"
   }
 
-  if(currentTab == 12 && document.querySelector("#comunicacaoForm")) {
+  if(currentTab == 12 && comunicacaoForm) {
     document.querySelector("#visual").value = visual
     document.querySelector("#auditivo").value = auditivo
     document.querySelector("#cinestesico").value = cinestesico
