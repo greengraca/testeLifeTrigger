@@ -1,3 +1,11 @@
+/* *{
+  box-sizing: unset !important;
+} */
+
+#comunicacaoForm, #perfilForm, #nextBtn, #prevBtn{
+  box-sizing: unset;
+}
+
 #perfilForm {
     background-color: #ffffff;
     margin: 6.25rem 0;
@@ -145,4 +153,13 @@
     color: red;
     font-weight: 500;
     /* border: 1px red solid; */
+  }
+
+  @media(max-width: 480px){
+    #perfilForm, #comunicacaoForm{
+      padding: 2.5rem 1rem;
+    }
+    .radioOption p{
+      align-items: unset;
+    }
   }

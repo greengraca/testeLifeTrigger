@@ -35,13 +35,6 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
     src: url('../fonts/Poppins-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
@@ -961,10 +954,6 @@ footer hr {
     width: 83%;
 }
 
-.extraBold {
-    font-weight: 800;
-}
-
 .bold {
     font-weight: 700;
 }
@@ -1303,6 +1292,9 @@ footer hr {
         font-size: 3rem;
     }
 
+    .cardObrigado{
+        width: 75%;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -1392,6 +1384,10 @@ footer hr {
         margin-top: 3rem;
     }
 
+    .cardObrigado{
+        width: 90%;
+        height: 26rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1650,7 +1646,25 @@ footer hr {
         width: 100%;
     }
 
+    /* Obrigado */
+    .cardObrigado{
+        width: 100%;
+        height: unset;
+    }
 
+    .cardObrigado h3 {
+        font-size: 1rem;
+    }
+    
+    .cardObrigado p{
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .cardObrigado a {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
 
     /* Footer */
     footer .comMargem {
