@@ -12,6 +12,14 @@
 
 
     <script type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "217a7822-2a27-45ce-9611-1572fe1f76eb"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCZNPBPBQZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WCZNPBPBQZ');
+    </script>
 </head>
 <body>
     <header>
@@ -263,23 +271,26 @@
               <h1 class="pergunta">Acha fácil ou dificil dizer-lhes?</h1>
               <hr>
               <p>
-                <label>Sim
-                  <input type="radio" name="Acha fácil ou dificil dizer-lhes?" value="Sim" oninput="this.className = ''">
+                <label>Fácil
+                  <input type="radio" name="Acha fácil ou dificil dizer-lhes?" value="Fácil" oninput="this.className = ''">
                 </label>
-                <label>Não
-                  <input type="radio" name="Acha fácil ou dificil dizer-lhes?" value="Não" oninput="this.className = ''">
+                <label>Difícil
+                  <input type="radio" name="Acha fácil ou dificil dizer-lhes?" value="Difícil" oninput="this.className = ''">
                 </label>
               </p>
               <hr>
             </div>
-    
-            <div class="tab">
-              <h1 class="pergunta">Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age?</h1>
+
+            <div class="tab radioOption">
+              <h1 class="pergunta">Quando se depara com uma situação:</h1>
               <hr>
               <p>
-                <textarea name="Quando se depara com uma situação age rápido após analisar ou faz um estudo das consequências e depois age?" placeholder="Sei...." cols="40" rows="8"
-                  oninput="this.className = '';this.style.height = '';this.style.height = this.scrollHeight + 'px'"
-                  style="resize: none;"></textarea>
+                <label>Age rápido após analisar
+                  <input type="radio" name="Quando se depara com uma situação:" value="Age rápido após analisar" oninput="this.className = ''">
+                </label>
+                <label>Faz um estudo das consequências e depois age
+                  <input type="radio" name="Quando se depara com uma situação:" value="faz um estudo das consequências e depois age" oninput="this.className = ''">
+                </label>
               </p>
               <hr>
             </div>
@@ -354,6 +365,20 @@
                 </label>
                 <label>As diferenças
                   <input type="radio" name="Numa situação nova, nota primeiro as semelhanças ou as diferenças?" value="As diferenças" oninput="this.className = ''">
+                </label>
+              </p>
+              <hr>
+            </div>
+
+            <div class="tab radioOption">
+              <h1 class="pergunta">Numa outra situação nova, nota primeiro as diferenças ou as semelhanças?</h1>
+              <hr>
+              <p>
+                <label>As diferenças
+                  <input type="radio" name="Numa outra situação nova, nota primeiro as diferenças ou as semelhanças?" value="As diferenças" oninput="this.className = ''">
+                </label>
+                <label>As semelhanças
+                  <input type="radio" name="Numa outra situação nova, nota primeiro as diferenças ou as semelhanças?" value="As semelhanças" oninput="this.className = ''">
                 </label>
               </p>
               <hr>
@@ -436,10 +461,11 @@
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Seguinte</button>
               </div>
             </div>
-            <span class="radioWarning" style="float:right;">Deves escolher pelo menos uma opção.</span>
+            <span class="radioWarning" style="float:right;">Deves escolher uma opção.</span>
             
             <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
