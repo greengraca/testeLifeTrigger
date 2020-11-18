@@ -1,149 +1,6 @@
-/* @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-} */
-
-
-/* Reset */
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-} */
-/* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */
-
-/* Fim do Reset */
-
-/* ScrollBar */
-
-/* ::-webkit-scrollbar {
-    width: 6px;
-} */
-  
-/* Track */
-/* ::-webkit-scrollbar-track {
-    background: #efefef;
-} */
-  
-/* Handle */
-/* ::-webkit-scrollbar-thumb {
-    background: #86F6B9;
-} */
-  
-/* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-    background: #00AF50;
-} */
-
-/* Início */
-
-/* * {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body{
-    font-family: 'Poppins', sans-serif;
     background-color: #fbfbfb;
-} */
+} 
 
 .navBarOutrasPaginas {
     position: fixed;
@@ -164,27 +21,6 @@ body{
     width: 100px;
 }
 
-/* .botoesNavegacao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.botoesNavegacao a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    transition: 0.3s;
-}
-
-.botoesNavegacao a:hover{
-    transform: translateY(-3px);
-    color: #86F6B9;
-} */
-
 .imagemPrincipal {
     margin-top: 4.25rem;
     width: 100%;
@@ -197,6 +33,14 @@ body{
     height: 100%;
     object-fit: cover;
     position: absolute;
+}
+
+.imagemPrincipalCertificacoes {
+    box-shadow: inset 0 -0.6rem 1rem 0 rgba(0,0,0,0.25);
+}
+
+.imagemPrincipalCertificacoes img {
+    object-fit: contain;
 }
 
 
@@ -230,7 +74,6 @@ body{
 
 .politicaTermos ul,
 .politicaTermos ol {
-    /* list-style-position: inside; */
     list-style-type: disc;
     margin-left: 2rem;
 }
@@ -243,128 +86,7 @@ body{
     margin-top: 4rem;
     font-size: 2rem;
     text-align: center;
-    /* font-weight: 500; */
 }
-
-
-
-
-/* Footer */
-
-/* footer {
-    margin-top: 6rem;
-    background-color: #2C5E43;
-}
-
-
-
-footer .comMargem {
-    height: 24rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.footerCima {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 100%;
-    padding-top: 2rem;
-}
-
-.footerCima p{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #86F6B9;
-    margin-bottom: 2rem;
-}
-
-.footerCima a,
-footer h4 {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #fdfdfd;
-    text-decoration: none;
-    margin-bottom: 1rem;
-}
-
-.navPaginaFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.navSuporteFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.navSeguirEmailFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.seguirFooter {
-    width: 100%;
-}
-
-.iconsFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navSeguirEmailFooter a {
-    margin-right: 0.4rem;
-    margin-bottom: 0;
-    font-weight: 400;
-    transition: 0.2s;
-}
-
-.footerCima a:hover {
-    color: #86F6B9;
-}
-
-.navSeguirEmailFooter i {
-    font-size: 1.88rem;
-}
-
-.seguirFooter {
-    margin-bottom: 3.5rem;
-}
-
-.footerBaixo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 2rem;
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: #d8d8d8;
-}
-
-footer hr {
-    height: 1px;
-    background-color: #d8d8d8;
-    border: none;
-    margin-bottom: 2rem;
-}
-
-.footerBaixo a {
-    font-weight: 500;
-    color: #d8d8d8;
-    text-decoration: none;  
-}
-
-.footerBaixo a:hover {
-    color: #aaa;
-} */
 
 /* Contacto */
 .interiorContacto{
@@ -624,4 +346,104 @@ footer hr {
 
 .cardObrigado a:hover {
     background-color: #92f082;
+}
+
+.paginasCertificacoes h4 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+.paginasCertificacoes h3{
+    font-size: 2.25rem;
+    margin-bottom: 8rem;
+    font-weight: 500;
+}
+
+.paginasCertificacoes img {
+    margin-bottom: 4rem;
+}
+
+.paginasCertificacoes ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.paginasCertificacoes li,
+.paginasCertificacoes p {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 157%;
+}
+
+
+.paginasCertificacoes ul li:last-child {
+    margin-bottom: 5rem;
+}
+
+.paginasCertificacoes iframe {
+    margin-bottom: 5rem;
+}
+
+.paginasCertificacoesBotao {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #2C5E43;
+    color: #fff;
+    width: 40rem;
+    text-align: center;
+    box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0,0,0,0.25);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.paginasCertificacoesBotao:hover {
+    background-color: #3f835f;
+}
+
+.certificacaoMobile{
+    display: none;
+}
+
+@media(max-width: 480px){
+    .paginasCertificacoes h3{
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+    }
+    .paginasCertificacoes h4{
+        font-size: 1.8rem;
+        /* margin-bottom: unset; */
+    }
+    .paginasCertificacoes iframe{
+        margin-bottom: unset;
+    }
+    .paginasCertificacoes li, .paginasCertificacoes p{
+        font-size: 1rem;
+    }
+    #semMargem{
+        margin-bottom: -4rem;
+    }
+    .paginasCertificacoesBotao{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 740px){
+    .paginasCertificacoesBotao{
+        width: unset;
+    }
+    .paginasCertificacoes iframe{
+        width: 100%;
+        height: 260;
+    }
+}
+
+@media(max-width: 840px){
+    .certificacaoDesktop{
+        display: none;
+    }
+    .certificacaoMobile{
+        display: block;
+    }
 }
