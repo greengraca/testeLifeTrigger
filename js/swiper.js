@@ -26,3 +26,36 @@ var swiper = new Swiper('.swiper-container', {
         disableOnInteraction: false,
     }
 });
+
+var swiperMarcas = new Swiper('.swiper-container-marcas', {
+    // Optional parameters
+    loop: true,
+    // centeredSlides: true,
+    speed: 10000,
+    spaceBetween: 50,
+    slidesPerView: 'auto',
+    loopedSlides: 11,
+    slidesPerGroup: 11,
+    freeMode: true,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false,
+    }
+})
+
+  var swiperMarcas2 = new Swiper('.swiper-container-marcas2', {
+    // Optional parameters
+    loop: true,
+    // centeredSlides: true,
+    speed: 10000,
+    spaceBetween: 50,
+    slidesPerView: 'auto',
+    loopedSlides: 11,
+    slidesPerGroup: 11,
+    freeMode: true,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false,
+        reverseDirection: true
+    }
+  })
