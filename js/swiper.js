@@ -31,7 +31,7 @@ var swiperMarcas = new Swiper('.swiper-container-marcas', {
     // Optional parameters
     loop: true,
     // centeredSlides: true,
-    speed: 10000,
+    speed: 15000,
     spaceBetween: 50,
     slidesPerView: 'auto',
     loopedSlides: 11,
@@ -47,7 +47,7 @@ var swiperMarcas = new Swiper('.swiper-container-marcas', {
     // Optional parameters
     loop: true,
     // centeredSlides: true,
-    speed: 10000,
+    speed: 15000,
     spaceBetween: 50,
     slidesPerView: 'auto',
     loopedSlides: 11,
